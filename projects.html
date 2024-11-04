@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madeline Cole - Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="index.html">Madeline Cole</a>
+        </div>
+        <div class="nav-links">
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="index.html#contact-form">Contact</a>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="sidebar">
+            <h2>Categories</h2>
+            <div class="category">
+                <h3>Design</h3>
+                <ul>
+                    <li><a href="#figma" class="category-link" data-category="figma">Figma</a></li>
+                    <li><a href="#wordpress" class="category-link" data-category="wordpress">WordPress</a></li>
+                    <li><a href="#adobe-illustrator" class="category-link" data-category="adobe-illustrator">Adobe Illustrator</a></li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Development</h3>
+                <ul>
+                    <li><a href="#python" class="category-link" data-category="python">Python</a></li>
+                    <li><a href="#java" class="category-link" data-category="java">Java</a></li>
+                    <li><a href="#html" class="category-link" data-category="html">HTML</a></li>
+                    <li><a href="#css" class="category-link" data-category="css">CSS</a></li>
+                    <li><a href="#js" class="category-link" data-category="js">JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Projects</h2>
+            <div id="figma" class="project-box" data-category="figma">
+                <div class="project-title">Project Title 1</div>
+                <div class="project-tag">Figma</div>
+                <p>Short description of Project 1.</p>
+                <div class="button-group">
+                    <a href="#" class="button">View Code</a>
+                    <a href="#" class="button">Live View</a>
+                    <a href="#" class="button">Case Study</a>
+                </div>
+            </div>
+            <!-- Repeat for other project boxes -->
+        </div>
+    </div>
+
+    <script src="projects.js"></script>
+</body>
+</html>

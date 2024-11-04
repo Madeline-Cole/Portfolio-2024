@@ -1,0 +1,46 @@
+.about-section {
+    padding: 100px 20px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.skill-tag {
+    background: #003366;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.about-container h1, .about-container h2 {
+    color: #003366;
+    margin-top: 30px;
+}
+
+.about-container p {
+    line-height: 1.6;
+    color: #333;
+}

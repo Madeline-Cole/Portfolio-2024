@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.projects-title {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.project {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+form {
+    margin: 10px;
+}
+
+input, textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #003366;
+    z-index: 1000;
+}
+
+.nav-brand a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+}
+
+/* HEADER */
+
+.dynamic-header {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, #003366 0%, #001830 100%);
+    overflow: hidden;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.floating-images {
+    height: 25vh;
+    position: relative;
+    width: 100%;
+}
+
+.floating-images.top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.floating-images.bottom {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.float-image {
+    height: 100%;
+    max-width: 300px;
+    object-fit: cover;
+    margin: 0 10px;
+    border-radius: 10px;
+    opacity: 0.7;
+    transform: translateY(0);
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-images.top .float-image:nth-child(1) { animation-delay: 0s; }
+.floating-images.top .float-image:nth-child(2) { animation-delay: 1s; }
+.floating-images.top .float-image:nth-child(3) { animation-delay: 2s; }
+.floating-images.top .float-image:nth-child(4) { animation-delay: 3s; }
+
+.floating-images.bottom .float-image:nth-child(1) { animation-delay: 2s; }
+.floating-images.bottom .float-image:nth-child(2) { animation-delay: 3s; }
+.floating-images.bottom .float-image:nth-child(3) { animation-delay: 0s; }
+.floating-images.bottom .float-image:nth-child(4) { animation-delay: 1s; }
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.intro-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 500px;
+}
+
+.intro-box h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.intro-box p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .float-image {
+        max-width: 200px;
+    }
+    
+    .intro-box {
+        margin: 0 20px;
+    }
+    
+    .intro-box h1 {
+        font-size: 2rem;
+    }
+}
+
+/* END OF HEADER CONTENT */
