@@ -1,47 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>About - Madeline Cole</title>
+  <style>
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #666;
+}
+
+.content-section {
+    padding-top: 5rem; /* Adds space for fixed navbar */
+}
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .content-section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+
+    .profile-content {
+      transform-origin: center;
+      transition: all 0.5s ease;
+    }
+
+    .laptop-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 800px;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    .laptop {
+      background: #333;
+      border-radius: 10px;
+      padding: 20px;
+      transform-origin: bottom;
+      transition: all 0.5s ease;
+    }
+
+    .laptop-screen {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      transform-origin: bottom;
+      overflow: hidden;
+    }
+
+    .laptop-base {
+      height: 20px;
+      background: #444;
+      margin: 0 auto;
+      border-radius: 0 0 10px 10px;
+      width: 120%;
+      margin-left: -10%;
+    }
+
+    .grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.5s ease;
+    }
+
+    .grid-item {
+      background: #f0f0f0;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      min-height: 200px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 2rem 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    /* Demographics styling */
+    .demographics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .skills-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .skill-category {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-brand">
             <a href="index.html">Madeline Cole</a>
         </div>
         <div class="nav-links">
-            <a href="index.html#projects">Projects</a>
+            <a href="projects.html">Projects</a>
             <a href="about.html">About</a>
-            <a href="index.html#contact-form">Contact</a>
+            <a href="#contact-form">Contact</a>
         </div>
     </nav>
 
-    <main class="about-section">
-        <div class="about-container">
-            <img src="your-photo.jpg" alt="Madeline Cole" class="profile-photo">
-            <h1>About Me</h1>
-            <p>Hello! I'm Madeline Cole, a passionate web developer and designer focused on creating intuitive digital experiences.</p>
-            
-            <h2>My Journey</h2>
-            <p>Share your background, education, and what drove you to web development...</p>
-            
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">CSS</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">UI/UX Design</span>
-            </div>
-            
-            <h2>Interests</h2>
-            <p>Share your interests, hobbies, or what you do when you're not coding...</p>
+  <div class="content-section">
+    <div class="profile-content">
+      <div class="demographics">
+        <div>
+          <h3>BIRTHPLACE</h3>
+          <p>Heidelberg, Germany</p>
         </div>
-    </main>
+        <div>
+          <h3>PRONOUNS</h3>
+          <p>She/Her</p>
+        </div>
+        <div>
+          <h3>COLLEGE</h3>
+          <p>University of Miami</p>
+        </div>
+        <div>
+          <h3>MAJOR</h3>
+          <p>Computer Science</p>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="skills-section">
+        <!-- Skills content -->
+        <div class="skill-category">
+          <h4>UI/UX Design</h4>
+          <p>Figma, Adobe Illustrator, Sketch</p>
+        </div>
+        <div class="skill-category">
+          <h4>Front End</h4>
+          <p>HTML5, CSS3, JavaScript</p>
+        </div>
+        <!-- Add other skills -->
+      </div>
+    </div>
+  </div>
+
+  <div class="laptop-container">
+    <div class="section-title">When I am not behind the screen...</div>
+    <div class="laptop">
+      <div class="laptop-screen"></div>
+    </div>
+    <div class="laptop-base"></div>
+  </div>
+
+  <div class="grid-section">
+    <div class="grid-item">Fostering Dogs</div>
+    <div class="grid-item">Cooking</div>
+    <div class="grid-item">Traveling</div>
+    <div class="grid-item">Fitness</div>
+  </div>
+
+  <script>
+    const profileContent = document.querySelector('.profile-content');
+    const laptopContainer = document.querySelector('.laptop-container');
+    const laptop = document.querySelector('.laptop');
+    const laptopScreen = document.querySelector('.laptop-screen');
+    const gridSection = document.querySelector('.grid-section');
+    const sectionTitle = document.querySelector('.section-title');
+
+    let lastScrollY = window.scrollY;
+    const animationBreakpoint = window.innerHeight * 0.3;
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const scrollProgress = Math.min(scrollY / animationBreakpoint, 1);
+
+      // First animation phase: Content shrinks and moves to laptop
+      if (scrollProgress <= 1) {
+        profileContent.style.transform = `scale(${1 - scrollProgress * 0.5})`;
+        profileContent.style.opacity = 1 - scrollProgress;
+        
+        laptopContainer.style.opacity = scrollProgress;
+        laptopScreen.style.transform = `scaleY(${1 - scrollProgress * 0.3})`;
+        
+        sectionTitle.style.opacity = scrollProgress;
+        sectionTitle.style.transform = `translateY(${20 - scrollProgress * 20}px)`;
+      }
+
+      // Second animation phase: Show grid items
+      if (scrollY > animationBreakpoint * 1.5) {
+        gridSection.style.opacity = 1;
+        gridSection.style.transform = 'translateY(0)';
+      }
+
+      lastScrollY = scrollY;
+    });
+  </script>
 </body>
 </html>
